@@ -40,3 +40,13 @@ http://www.thoughts-on-java.org/jpa-21-entity-graph-part-2-define/
 http://www.radcortez.com/jpa-entity-graphs/
 
 https://en.wikibooks.org/wiki/Java_Persistence
+
+# Query DSL 
+see https://www.baeldung.com/intro-to-querydsl
+```
+EntityManagerFactory emf = Persistence.createEntityManagerFactory("com.baeldung.querydsl.intro");
+EntityManager em = entityManagerFactory.createEntityManager();
+JPAQueryFactory queryFactory = new JPAQueryFactory(em);
+QUser user = QUser.user;
+User c = queryFactory.selectFrom(user).where(user.login.eq("David")).fetchOne();
+```
