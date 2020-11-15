@@ -39,4 +39,5 @@ dependency.txt
 *-test.log
 /subtitles-extractor.log
 /albums-webapp.log
-/jpa.*.db
+/jpa-db.*
+/springbootjpa.log

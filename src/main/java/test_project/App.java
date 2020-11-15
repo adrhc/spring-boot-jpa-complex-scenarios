@@ -16,47 +16,47 @@ import test_project.util.PrintUtil;
 @SpringBootApplication
 @EnableTransactionManagement
 public class App implements CommandLineRunner {
-    private static final Logger logger = LoggerFactory.getLogger(App.class);
-    @Autowired
-    private PrintUtil printUtil;
-    @Autowired
-    private AppService appService;
-    @Autowired
-    private AppService2 appService2;
-    @Autowired
-    private AppService3 appService3;
-    @Autowired
-    private AppService4 appService4;
-    @Autowired
-    private AppService6 appService6;
-    @Autowired
-    private AppService7 appService7;
-    @Autowired
-    private AppService8 appService8;
-    @Autowired
-    private AppService9 appService9;
-    @Autowired
-    private AppService10 appService10;
+	private static final Logger logger = LoggerFactory.getLogger(App.class);
+	@Autowired
+	private PrintUtil printUtil;
+	@Autowired
+	private AppService appService;
+	@Autowired
+	private AppService2 appService2;
+	@Autowired
+	private AppService3 appService3;
+	@Autowired
+	private AppService4 appService4;
+	@Autowired
+	private AppService6 appService6;
+	@Autowired
+	private AppService7 appService7;
+	@Autowired
+	private AppService8 appService8;
+	@Autowired
+	private AppService9 appService9;
+	@Autowired
+	private AppService10 appService10;
 
-    public static void main(String[] args) throws Exception {
-        SpringApplication.run(App.class, args);
-    }
+	public static void main(String[] args) {
+		SpringApplication.run(App.class, args);
+	}
 
-    public void run(String... args) {
-        logger.debug("****************************************************");
-        logger.debug("works only with @SpringBootApplication on App.class!");
-        logger.debug("****************************************************");
-        logger.debug("begin setup 1");
-        appService.persistPerson();
-        appService.persistGeeks();
+	public void run(String... args) {
+		logger.debug("****************************************************");
+		logger.debug("works only with @SpringBootApplication on App.class!");
+		logger.debug("****************************************************");
+		logger.debug("begin setup 1");
+		appService.persistPerson();
+		appService.persistGeeks();
 //        appService.showGeeks();
-        appService.persistGeekWithIdCardAndPhones();
+		appService.persistGeekWithIdCardAndPhones();
 //        appService.showGeekAdr();
 //        printUtil.printPersonByIdThenFirstName(5L, "Adr");// Adr geek too
 //        appService.showPersons();
-        appService.saveProjects();
+		appService.saveProjects();
 //        appService.showPersons12();
-        appService.showGeekByIdUsingHQL(4L);
+		appService.showGeekByIdUsingHQL(4L);
 //        logger.debug("****************************************************");
 //        logger.debug("begin setup 2");
 //        appService.saveEmployeeWithPhone();
@@ -138,6 +138,6 @@ public class App implements CommandLineRunner {
 //        appService10.searchPerson9WithFetch();
 //        appService10.searchPerson9WithFetchMapKey();
 //        appService10.searchPerson9WWhereExistsAttachTextLengthLess10();
-        logger.debug("END run");
-    }
+		logger.debug("END run");
+	}
 }
