@@ -41,3 +41,4 @@ dependency.txt
 /albums-webapp.log
 /jpa-db.*
 /springbootjpa.log
+app-*.log.*
